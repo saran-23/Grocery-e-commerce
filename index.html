@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Grocery</title>
+    <link rel="icon" href="./Your Store_files/favicon.ico" type="image/icon">
+    <meta name="description" content="My Store">
+    <!-- jQuery -->
+    <script src="./Your Store_files/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="./Your Store_files/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="./Your Store_files/bootstrap.min.js" type="text/javascript"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Web Fonts -->
+    <link href="./Your Store_files/css" rel="stylesheet">
+    <!-- CSS  -->
+    <link href="./Your Store_files/stylesheet.css" rel="stylesheet">
+    <link href="./Your Store_files/stylesheet-responsive.css" rel="stylesheet">
+    <link href="./Your Store_files/swiper.min.css" type="text/css" rel="stylesheet" media="screen">
+    <link href="./Your Store_files/opencart.css" type="text/css" rel="stylesheet" media="screen">
+    <script src="./Your Store_files/swiper.jquery.js" type="text/javascript"></script>
+    <!-- JavaScript  -->
+    <script src="./Your Store_files/custom.js" type="text/javascript"></script>
+    <script src="./Your Store_files/common.js" type="text/javascript"></script>
+    <!--  Iconify    -->
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+</head>
+
+<body>
+    <!-- Main Header Starts -->
+    <header class="main-header">
+        <!-- Nested Container Starts -->
+        <div class="container">
+            <!-- Top Bar Starts -->
+            <div class="topbar clearfix text-center-xs font-weight-medium">
+                <!-- Welcome Text Starts -->
+                <div class="pull-left-lg pull-left-md pull-left-sm">
+                    <p class="mb-lg-0 mb-md-0">Welcome to Grocery (super market)
+                    </p>
+                </div>
+                <!-- Welcome Text Ends -->
+                <!-- Top Links Starts -->
+                <div class="pull-right-lg pull-right-md pull-right-sm">
+                    <ul class="list-unstyled list-inline top-links mb-0 text-right-lg text-right-md text-right-sm">
+                        <li class="dropdown"><a href="#" title="My Account" class="dropdown-toggle animation" data-toggle="dropdown">My Account <span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-right rounded-0">
+                                <li>
+                                    <a href="./Account_registration.html"><span class="iconify" data-icon="fa:address-card-o" data-inline="true"></span>&nbsp;Register</a>
+                                </li>
+                                <li>
+                                    <a href="./Account_Login.html"><span class="iconify" data-icon="ic:round-login" data-inline="true" height="18"></span>&nbsp;Login</a>
+                                </li>
+                                <li><a href="#"><span class="iconify" data-icon="ant-design:appstore-outlined" data-inline="true" height="18"></span>&nbsp;Dashboard</a></li>
+                                <li><a href="#"><span class="iconify" data-icon="bi:box-seam" data-inline="true" height="18"></span>&nbsp;My Orders</a></li>
+                                <li><a href="#"><span class="iconify" data-icon="bx:bx-heart" data-inline="true" height="18"></span>&nbsp;My Wishlist</a></li>
+                                <li><a href="#"><span class="iconify" data-icon="uil:usd-circle" data-inline="true" height="18"></span>&nbsp;My Wallet</a></li>
+                                <!--
+                                <a class="dropdown-item" href="#!"><span class="iconify" data-icon="ant-design:appstore-outlined" data-inline="true" height="18"></span>&nbsp;&nbsp;Dashboard</a>
+                                <a class="dropdown-item" href="#!"><span class="iconify" data-icon="bi:box-seam" data-inline="true" height="18"></span>&nbsp;&nbsp;&nbsp;My Orders</a>
+                                <a class="dropdown-item" href="#!"><span class="iconify" data-icon="bx:bx-heart" data-inline="true" height="18"></span>&nbsp;&nbsp;My Wishlist</a>
+                                <a class="dropdown-item" href="#!"><span class="iconify" data-icon="uil:usd-circle" data-inline="true" height="18"></span>&nbsp;&nbsp;My Wallet</a>
+-->
+                            </ul>
+                        </li>
+                        <li class="animation">
+                            <a href="#" id="wishlist-total" title="Offers">Offers </a
+                        ></li>
+                        <li class="animation"><a href="#" title="Help">Help</a></li>
+
+                        <li class="animation">
+                            <a href="#" title="Helpline">1800-000-000</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Top Links Ends -->
+            </div>
+            <!-- Top Bar Ends -->
+            <!-- Main Menu Starts -->
+            <nav id="menu" class="navbar">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img src="./Your Store_files/LogoMakr_48wQfZ.png" title="grocery" alt="grocery" class="img-responsive">
+                    </a>
+                    <button type="button" class="btn btn-navbar navbar-toggle rounded-0" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+                    <span class="hidden visible-xs visible-sm pull-right"><div id="cart" class="btn-group btn-block clearfix">
+  <button type="button" data-toggle="dropdown" data-loading-text="Loading..." class="btn dropdown-toggle"><img src="./Your Store_files/shopping-bag.png" alt="Search"><span id="cart-total" class="rounded-circle">0</span></button>
+                    <ul class="dropdown-menu pull-right" style="">
+                        <li class="cart-empty">
+                            <p class="text-center">Your shopping cart is empty!</p>
+                        </li>
+                    </ul>
+                </div>
+                </span>
+                <span class="hidden visible-xs visible-sm pull-right"><div class="btn-group search-dropdown">
+  <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+    <img src="./Your Store_files/search-icon.png" alt="Search">
+  </button>
+  <ul class="dropdown-menu pull-right" style="">
+    <li>
+      <div id="search" class="input-group">
+        <input type="text" name="search" value="" placeholder="Search" class="form-control search-dropdown-input rounded-0">
+        <span class="input-group-btn">
+          <button type="button" class="btn search-dropdown-btn rounded-0"><i class="fa fa-search"></i></button>
+        </span>
+        </div>
+        </li>
+        </ul>
+        </div>
+        </span>
+        </div>
+        <div class="navbar-collapse navbar-ex1-collapse collapse in" aria-expanded="true" style="">
+            <ul class="nav navbar-nav menu-links">
+                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">New Products</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Featured Products</a>
+                </li>
+
+                <li class="dropdown">
+
+                    <div class="dropdown-menu" style="">
+                        <div class="dropdown-inner">
+                            <!--   
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home</a>
+                                     CREDRATED FOR THE   DROPDOWN     
+                                           <ul class="list-unstyled">
+                                <li><a href="#">test </a></li>
+                                <li><a href="#">test </a></li>
+                            </ul>-->
+
+
+                        </div>
+                        <a href="#" class="see-all">Show All Desktops</a> </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages &nbsp;<i class="fa fa-angle-down"></i></a>
+                    <div class="dropdown-menu" style="">
+                        <div class="dropdown-inner">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#">Account</a>
+                                </li>
+                                <li>
+                                    <a href="#">About Us</a></li>
+                                <li>
+                                    <a href="#">Shop Grid</a>
+                                </li>
+                                <li>
+                                    <a href="#">Single Product View</a>
+                                </li>
+                                <li>
+                                    <a href="#">Checkout</a>
+                                </li>
+                                <li>
+                                    <a href="#">Product Request </a></li>
+                                <li>
+                                    <a href="#">Order Placed</a>
+                                </li>
+                                <li>
+                                    <a href="#">Bill Slip</a></li>
+                                <li>
+                                    <a href="#">Sign In</a>
+                                </li>
+                                <li>
+                                    <a href="#">Sign Up</a>
+                                </li>
+                                <li>
+                                    <a href="#">Forget Password</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#" class="see-all">Show All Pages</a> </div>
+                </li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog &nbsp;<i class="fa fa-angle-down"></i></a>
+                    <div class="dropdown-menu" style="">
+                        <div class="dropdown-inner">
+                            <ul class="list-unstyled">
+                                <li><a href="#_">Our Blog</a></li>
+                                <li><a href="#_">Our Blog Two No Sidebar</a></li>
+                                <li><a href="#_">Our Blog with Left Sidebar
+                                </a></li>
+                                <li>
+                                    <a href="#">Our Blog with Right Sidebar</a>
+                                </li>
+                                <li><a href="#">Blog Detail View</a></li>
+                                <li>
+                                    <a href="#">Blog Detail View with Sidebar</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#" class="see-all">Show All Blog</a> </div>
+                </li>
+                <li><a href="#">Contact Us</a></li>
+
+                <!--
+                <li><a href="">feedback</a></li>
+                -->
+                <!--
+                <li class="dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">Home</a>
+                <div class="dropdown-menu" style="margin-left: -537.547px;">
+                    <div class="dropdown-inner">
+                        <ul class="list-unstyled">
+                            <li><a href="#">test 11 </a></li>
+                            <li><a href="#">test 12 </a></li>
+                            <li><a href="#">test 15 </a></li>
+                            <li><a href="#">test 16 </a></li>
+                            <li><a href="#">test 17 </a></li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><a href="#">test 18</a></li>
+                            <li><a href="#">test 19</a></li>
+                            <li><a href="#">test 20 </a></li>
+                            <li><a href="#">test 21 </a></li>
+                            <li><a href="#">test 22 </a></li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><a href="#">test 23 </a></li>
+                            <li><a href="#">test 24 </a></li>
+                            <li><a href="#">test 4 </a></li>
+                            <li><a href="#">test 5 </a></li>
+                            <li><a href="#">test 6 </a></li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><a href="#">test 7 </a></li>
+                            <li><a href="#">test 8 </a></li>
+                            <li><a href="#">test 9 </a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="see-all">Show All Pages</a> </div>
+                </li>
+            </ul>
+            --->
+                <ul class="nav navbar-nav navbar-right hidden visible-lg visible-md">
+                    <li>
+                        <div class="btn-group search-dropdown">
+                            <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+    <img src="./Your Store_files/search-icon.png" alt="Search">
+  </button>
+                            <ul class="dropdown-menu pull-right" style="margin-left: -70px;">
+                                <li>
+                                    <div id="search" class="input-group">
+                                        <input type="text" name="search" value="" placeholder="Search" class="form-control search-dropdown-input rounded-0">
+                                        <span class="input-group-btn">
+          <button type="button" class="btn search-dropdown-btn rounded-0"><i class="fa fa-search"></i></button>
+        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="cart" class="btn-group btn-block clearfix">
+                            <button type="button" data-toggle="dropdown" data-loading-text="Loading..." class="btn dropdown-toggle"><img src="./Your Store_files/shopping-bag.png" alt="Search"><span id="cart-total" class="rounded-circle">0</span></button>
+                            <ul class="dropdown-menu pull-right" style="margin-left: -35px;">
+                                <li class="cart-empty">
+                                    <p class="text-center">Your shopping cart is empty!</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+        </div>
+        </nav>
+    </header>
+    <!-- Main Menu Ends -->
+    </div>
+    <!-- Nested Container Ends -->
+
+    <!-- Main Header Ends -->
+    <div id="common-home" class="container">
+        <div class="row">
+            <div id="content" class="col-sm-12">
+
+                <div class="main-slider swiper-viewport rounded-0">
+                    <div id="slideshow0" class="swiper-container swiper-container-horizontal">
+                        <div class="swiper-wrapper" style="transform: translate3d(-2340px, 0px, 0px); transition-duration: 0ms;">
+                            <div class="swiper-slide text-center swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="1">
+                                <a href="# "><img src="./Your Store_files/img/slide_1.jpg" alt="Slide 2 " class="img-responsive "></a>
+                            </div>
+                            <div class="swiper-slide text-center swiper-slide-prev swiper-slide-duplicate-next " data-swiper-slide-index="0 ">
+                                <a href="# "><img src="./Your Store_files/img/slide_1.jpg " alt="Slide 1 " class="img-responsive "></a>
+                            </div>
+                            <div class="swiper-slide text-center swiper-slide-active " data-swiper-slide-index="1 ">
+                                <a href="# "><img src="./Your Store_files/img/slide_2.jpg" alt="Slide 2 " class="img-responsive "></a>
+                            </div>
+                            <div class="swiper-slide text-center swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev " data-swiper-slide-index="0 ">
+                                <a href="# "><img src="./Your Store_files/img/slide_2.jpg" alt="Slide 1 " class="img-responsive "></a>s
+                            </div>
+                            <!--extra-->
+
+
+                            <div class="swiper-slide text-center swiper-slide-duplicate swiper-slide-duplicate-active " data-swiper-slide-index="1 " style="width: 370px; margin-right: 30px;">
+                                <a href="# "><img src="./Your Store_files/img/slide_5.jpg" alt="Slide 2 " class="img-responsive "></a>
+                            </div>
+                            <div class="swiper-slide text-center swiper-slide-prev swiper-slide-duplicate-next " data-swiper-slide-index="0 " style="width: 370px; margin-right: 30px;">
+                                <a href="# "><img src="./Your Store_files/img/slide_5.jpg " alt="Slide 1 " class="img-responsive "></a>
+                            </div>
+                            <div class="swiper-slide text-center swiper-slide-active " data-swiper-slide-index="1 " style="width: 370px; margin-right: 30px;">
+                                <a href="# "><img src="./Your Store_files/img/slide_6.jpg" alt="Slide 2 " class="img-responsive "></a>
+                            </div>
+                            <div class="swiper-slide text-center swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev " data-swiper-slide-index="0 " style="width: 370px; margin-right: 30px;">
+                                <a href="# "><img src="./Your Store_files/img/slide_6.jpg" alt="Slide 1 " class="img-responsive "></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-pagination slideshow0 "></div>
+                    <div class="swiper-pager ">
+                        <div class="swiper-button-next "></div>
+                        <div class="swiper-button-prev "></div>
+                    </div>
+                </div>
+                <script type="text/javascript ">
+                    <!--
+                    $('#slideshow0').swiper({
+                        mode: 'horizontal',
+                        slidesPerView: 1,
+                        //pagination: '.slideshow0',
+                        //paginationClickable: true,
+                        nextButton: '.swiper-button-next',
+                        prevButton: '.swiper-button-prev',
+                        spaceBetween: 30,
+                        autoplay: 2500,
+                        autoplayDisableOnInteraction: true,
+                        loop: true
+                    });
+                    -->
+                </script>
+
+                <!--POPULAR CATEGORIES STARTS HERE-->
+
+                <div id="topcat0 " class="cat-grid-wrap text-center animation ">
+                    <h3 class="module-product-heading ">Popular Categories</h3>
+                    <div class="row ">
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 ">
+                            <div class="cat-grid animation rounded-3 ">
+                                <div class="cat-grid-image">
+                                    <a href="#"><img src="./Your Store_files/img/veg.svg" alt="Vegetables &amp; Fruits" class="img-responsive img-center" style="height: 50px; width:50px"></a>
+                                </div>
+                                <br>
+                                <h6 class="cat-grid-title ">
+
+                                    <a href="#">Vegetables &amp; Fruits</a>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 ">
+                            <div class="cat-grid animation rounded-3 ">
+                                <div class="cat-grid-image ">
+                                    <a href="#"><img src="./Your Store_files/img/gorceryandstaples.svg" alt="Grocery &amp; Staples " class="img-responsive img-center" style="height: 50px; width:50px"></a>
+                                </div>
+                                <br>
+                                <h6 class="cat-grid-title "><a href="# ">Grocery &amp; Staples</a></h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 ">
+                            <div class="cat-grid animation rounded-3 ">
+                                <div class="cat-grid-image ">
+                                    <a href="#"><img src="./Your Store_files/img/dairyandeggs.svg" alt="Dairy &amp; Eggs" class="img-responsive img-center " style="height: 50px; width:50px" style="height: 50px; width:50px"></a>
+                                </div>
+                                <br>
+                                <h6 class="cat-grid-title "><a href="# ">Dairy &amp; Eggs</a></h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 ">
+                            <div class="cat-grid animation rounded-3 ">
+                                <div class="cat-grid-image ">
+                                    <a href="# "><img src="./Your Store_files/img/beverages.svg" alt="Beverages" class="img-responsive img-center " style="height: 50px; width:50px" style="height: 50px; width:50px"></a>
+                                </div>
+                                <br>
+                                <h6 class="cat-grid-title "><a href="# ">Beverages</a></h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 ">
+                            <div class="cat-grid animation rounded-3 ">
+                                <div class="cat-grid-image ">
+                                    <a href="# "><img src="./Your Store_files/img/snacks.svg" alt="Snacks" class="img-responsive img-center " style="height: 50px; width:50px" style="height: 50px; width:50px"></a>
+                                </div>
+                                <br>
+                                <h6 class="cat-grid-title "><a href="# ">Snacks</a></h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 ">
+                            <div class="cat-grid animation rounded-3 ">
+                                <div class="cat-grid-image ">
+                                    <a href="# "><img src="./Your Store_files/img/personalcare.svg" alt="Personal Care" class="img-responsive img-center " style="height: 50px; width:50px"></a>
+                                </div>
+                                <br>
+                                <h6 class="cat-grid-title "><a href="# ">Personal Care</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!------BANNERS STARTS HERRE----->
+                <div id="topcat0 " class="cat-grid-wrap text-center animation ">
+                    <h3 class="module-product-heading "> Best Values</h3>
+                    <div id="bannergrid0 " class="banner-grid-wrap text-center ">
+                        <div class="row ">
+                            <div class="col-sm-6 col-xs-12 ">
+                                <div class="banner-grid ">
+                                    <a href="#"><img src="Your Store_files/img/banner1.jpg" alt="Banner 1 " class="img-responsive img-center rounded-3 ">vegetables
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12 ">
+                                <div class="banner-grid ">
+                                    <a href="#"><img src="Your Store_files/img/banner2.jpg" alt="Banner 2 " class="img-responsive img-center rounded-3 ">Hot deals</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Featured Products Start 
+                    <div class="section145">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="main-title-tt">
+                                        <div class="main-title-left">
+                                            <span>For You</span>
+                                            <h2>Top Featured Products</h2>
+                                        </div>
+                                        <a href="#" class="see-more-btn">See All</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="owl-carousel featured-slider owl-theme owl-loaded owl-drag">
+
+
+
+
+
+
+
+
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0.25s ease 0s; width: 1888px;">
+                                                <div class="owl-item active" style="width: 226px; margin-right: 10px;">
+                                                    <div class="item">
+                                                        <div class="product-item">
+                                                            <a href="#" class="product-img">
+                                                                <img src="./Your Store_files/img/carrot.jpg" alt="">
+                                                                <div class="product-absolute-options">
+                                                                    <span class="offer-badge-1">6% off</span>
+                                                                    <span class="like-icon" title="wishlist"></span>
+                                                                </div>
+                                                            </a>
+                                                            <div class="product-text-dt">
+                                                                <p>Available<span>(In Stock)</span></p>
+                                                                <h4>Product Title Here</h4>
+                                                                <div class="product-price">$12 <span>$15</span></div>
+                                                                <div class="qty-cart">
+                                                                    <div class="quantity buttons_added">
+                                                                        <input type="button" value="-" class="minus minus-btn">
+                                                                        <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+                                                                        <input type="button" value="+" class="plus plus-btn">
+                                                                    </div>
+                                                                    <span class="cart-icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="owl-item active" style="width: 226px; margin-right: 10px;">
+                                                    <div class="item">
+                                                        <div class="product-item">
+                                                            <a href="#" class="product-img">
+                                                                <img src="img-2.jpg" alt="">
+                                                                <div class="product-absolute-options">
+                                                                    <span class="offer-badge-1">2% off</span>
+                                                                    <span class="like-icon" title="wishlist"></span>
+                                                                </div>
+                                                            </a>
+                                                            <div class="product-text-dt">
+                                                                <p>Available<span>(In Stock)</span></p>
+                                                                <h4>Product Title Here</h4>
+                                                                <div class="product-price">$10 <span>$13</span></div>
+                                                                <div class="qty-cart">
+                                                                    <div class="quantity buttons_added">
+                                                                        <input type="button" value="-" class="minus minus-btn">
+                                                                        <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+                                                                        <input type="button" value="+" class="plus plus-btn">
+                                                                    </div>
+                                                                    <span class="cart-icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="owl-item active" style="width: 226px; margin-right: 10px;">
+                                                    <div class="item">
+                                                        <div class="product-item">
+                                                            <a href="#" class="product-img">
+                                                                <img src="img-2.jpg" alt="">
+                                                                <div class="product-absolute-options">
+                                                                    <span class="offer-badge-1">5% off</span>
+                                                                    <span class="like-icon" title="wishlist"></span>
+                                                                </div>
+                                                            </a>
+                                                            <div class="product-text-dt">
+                                                                <p>Available<span>(In Stock)</span></p>
+                                                                <h4>Product Title Here</h4>
+                                                                <div class="product-price">$5 <span>$8</span></div>
+                                                                <div class="qty-cart">
+                                                                    <div class="quantity buttons_added">
+                                                                        <input type="button" value="-" class="minus minus-btn">
+                                                                        <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+                                                                        <input type="button" value="+" class="plus plus-btn">
+                                                                    </div>
+
+                                                                    <span class="cart-icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="owl-item active" style="width: 226px; margin-right: 10px;">
+                                                    <div class="item">
+                                                        <div class="product-item">
+                                                            <a href="#" class="product-img">
+                                                                <img src="img-2.jpg" alt="">
+                                                                <div class="product-absolute-options">
+                                                                    <span class="offer-badge-1">3% off</span>
+                                                                    <span class="like-icon" title="wishlist"></span>
+                                                                </div>
+                                                            </a>
+                                                            <div class="product-text-dt">
+                                                                <p>Available<span>(In Stock)</span></p>
+                                                                <h4>Product Title Here</h4>
+                                                                <div class="product-price">$15 <span>$20</span></div>
+                                                                <div class="qty-cart">
+                                                                    <div class="quantity buttons_added">
+                                                                        <input type="button" value="-" class="minus minus-btn">
+                                                                        <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+                                                                        <input type="button" value="+" class="plus plus-btn">
+                                                                    </div>
+                                                                    <span class="cart-icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="owl-item active" style="width: 226px; margin-right: 10px;">
+                                                    <div class="item">
+                                                        <div class="product-item">
+                                                            <a href="#" class="product-img">
+                                                                <img src="img-2.jpg" alt="">
+                                                                <div class="product-absolute-options">
+                                                                    <span class="offer-badge-1">2% off</span>
+                                                                    <span class="like-icon" title="wishlist"></span>
+                                                                </div>
+                                                            </a>
+                                                            <div class="product-text-dt">
+                                                                <p>Available<span>(In Stock)</span></p>
+                                                                <h4>Product Title Here</h4>
+                                                                <div class="product-price">$9 <span>$10</span></div>
+                                                                <div class="qty-cart">
+                                                                    <div class="quantity buttons_added">
+                                                                        <input type="button" value="-" class="minus minus-btn">
+                                                                        <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+                                                                        <input type="button" value="+" class="plus plus-btn">
+                                                                    </div>
+                                                                    <span class="cart-icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="owl-item" style="width: 226px; margin-right: 10px;">
+                                                    <div class="item">
+                                                        <div class="product-item">
+                                                            <a href="#" class="product-img">
+                                                                <img src="img-2.jpg" alt="">
+                                                                <div class="product-absolute-options">
+                                                                    <span class="offer-badge-1">2% off</span>
+                                                                    <span class="like-icon" title="wishlist"></span>
+                                                                </div>
+                                                            </a>
+                                                            <div class="product-text-dt">
+                                                                <p>Available<span>(In Stock)</span></p>
+                                                                <h4>Product Title Here</h4>
+                                                                <div class="product-price">$7 <span>$8</span></div>
+                                                                <div class="qty-cart">
+                                                                    <div class="quantity buttons_added">
+                                                                        <input type="button" value="-" class="minus minus-btn">
+                                                                        <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+                                                                        <input type="button" value="+" class="plus plus-btn">
+                                                                    </div>
+                                                                    <span class="cart-icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="owl-item" style="width: 226px; margin-right: 10px;">
+                                                    <div class="item">
+                                                        <div class="product-item">
+                                                            <a href="#" class="product-img">
+                                                                <img src="img-2.jpg" alt="">
+                                                                <div class="product-absolute-options">
+                                                                    <span class="offer-badge-1">1% off</span>
+                                                                    <span class="like-icon" title="wishlist"></span>
+                                                                </div>
+                                                            </a>
+                                                            <div class="product-text-dt">
+                                                                <p>Available<span>(In Stock)</span></p>
+                                                                <h4>Product Title Here</h4>
+                                                                <div class="product-price">$6.95 <span>$7</span></div>
+                                                                <div class="qty-cart">
+                                                                    <div class="quantity buttons_added">
+                                                                        <input type="button" value="-" class="minus minus-btn">
+                                                                        <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+                                                                        <input type="button" value="+" class="plus plus-btn">
+                                                                    </div>
+                                                                    <span class="cart-icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="owl-item" style="width: 226px; margin-right: 10px;">
+                                                    <div class="item">
+                                                        <div class="product-item">
+                                                            <a href="#" class="product-img">
+                                                                <img src="img-2.jpg" alt="">
+                                                                <div class="product-absolute-options">
+                                                                    <span class="offer-badge-1">3% off</span>
+                                                                    <span class="like-icon" title="wishlist"></span>
+                                                                </div>
+                                                            </a>
+                                                            <div class="product-text-dt">
+                                                                <p>Available<span>(In Stock)</span></p>
+                                                                <h4>Product Title Here</h4>
+                                                                <div class="product-price">$8 <span>$10</span></div>
+                                                                <div class="qty-cart">
+                                                                    <div class="quantity buttons_added">
+                                                                        <input type="button" value="-" class="minus minus-btn">
+                                                                        <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+                                                                        <input type="button" value="+" class="plus plus-btn">
+                                                                    </div>
+                                                                    <span class="cart-icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-nav"><button type="button" role="presentation" class="owl-prev disabled"><i class="uil uil-angle-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="uil uil-angle-right"></i></button></div>
+                                        <div class="owl-dots disabled"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+                <!-- Featured Products End -->
+
+                <div class="module-product-wrap ">
+                    <!-- Module Heading Starts -->
+                    <h3 class="module-product-heading ">Latest</h3>
+                    <!-- Module Heading Ends -->
+                    <!-- Nested Row Starts -->
+                    <div class="row ">
+                        <!-- Product Col Starts -->
+                        <div class="product-layout col-lg-3 col-md-4 col-sm-6 col-xs-12 ">
+                            <!-- Product Module Starts -->
+                            <div class="product-thumb module-product animation rounded-3 ">
+                                <!-- Product Image Starts -->
+                                <div class="module-product-image ">
+                                    <a h ref="#">
+                                        <img src="./Your Store_files/img/capsicam.jpg     " alt="Samsung Galaxy Tab 10.1 " title="Samsung Galaxy Tab 10.1 " class="img-responsive img-center ">
+                                    </a>
+                                </div>
+                                <!-- Product Image Ends -->
+                                <!-- Product Caption Starts -->
+                                <div class="module-product-caption ">
+                                    <!-- Product Name Starts -->
+                                    <h6 class="module-product-title "><a href="#">Carrot</a></h6>
+                                    <!-- Product Name Ends -->
+                                    <!-- Product Description Starts -->
+                                    <div class="module-product-description hidden ">
+                                    </div>
+                                    <!-- Product Description Ends -->
+                                    <!-- Product Price Starts -->
+                                    <div class="module-product-price ">
+                                        $241.99
+                                    </div>
+                                    <!-- Product Price Ends -->
+                                    <!-- Add To Cart Button Starts -->
+                                    <button type="button " class="btn module-product-btn-cart animation rounded-3 " onclick="cart.add(&#39;49&#39;); "><i class="fa fa-shopping-cart "></i> Add to Cart</button>
+                                    <!-- Add To Cart Button Ends -->
+                                </div>
+                                <!-- Product Caption Ends -->
+                            </div>
+                            <!-- Product Module Ends -->
+                        </div>
+                        <!-- Product Col Ends -->
+                        <!-- Product Col Starts -->
+                        <div class="product-layout col-lg-3 col-md-4 col-sm-6 col-xs-12 ">
+                            <!-- Product Module Starts -->
+                            <div class="product-thumb module-product animation rounded-3 ">
+                                <!-- Product Image Starts -->
+                                <div class="module-product-image ">
+                                    <a href="#">
+                                        <img src="./Your Store_files/img/carrot.jpg " alt="Carrot" title="Carrot" class="img-responsive img-center ">
+                                    </a>
+                                </div>
+                                <!-- Product Image Ends -->
+                                <!-- Product Caption Starts -->
+                                <div class="module-product-caption ">
+                                    <!-- Product Name Starts -->
+                                    <h6 class="module-product-title "><a href="#">Carrot</a></h6>
+                                    <!-- Product Name Ends -->
+                                    <!-- Product Description Starts -->
+                                    <div class="module-product-description hidden ">
+                                    </div>
+                                    <!-- Product Description Ends -->
+                                    <!-- Product Price Starts -->
+                                    <div class="module-product-price ">
+                                        $122.00
+                                    </div>
+                                    <!-- Product Price Ends -->
+                                    <!-- Add To Cart Button Starts -->
+                                    <button type="button " class="btn module-product-btn-cart animation rounded-3 " onclick="cart.add(&#39;48&#39;); "><i class="fa fa-shopping-cart "></i> Add to Cart</button>
+                                    <!-- Add To Cart Button Ends -->
+                                </div>
+                                <!-- Product Caption Ends -->
+                            </div>
+                            <!-- Product Module Ends -->
+                        </div>
+                        <!-- Product Col Ends -->
+                        <!-- Product Col Starts -->
+                        <div class="product-layout col-lg-3 col-md-4 col-sm-6 col-xs-12 ">
+                            <!-- Product Module Starts -->
+                            <div class="product-thumb module-product animation rounded-3 ">
+                                <!-- Product Image Starts -->
+                                <div class="module-product-image ">
+                                    <a h ref="#">
+                                        <img src="./Your Store_files/img/carrot.jpg " alt="Carrot" title="Carrot" class="img-responsive img-center ">
+                                    </a>
+                                </div>
+                                <!-- Product Image Ends -->
+                                <!-- Product Caption Starts -->
+                                <div class="module-product-caption ">
+                                    <!-- Product Name Starts -->
+                                    <h6 class="module-product-title "><a href="# ">Carrot</a></h6>
+                                    <!-- Product Name Ends -->
+                                    <!-- Product Description Starts -->
+                                    <div class="module-product-description hidden ">
+                                    </div>
+                                    <!-- Product Description Ends -->
+                                    <!-- Product Price Starts -->
+                                    <div class="module-product-price ">
+                                        $122.00
+                                    </div>
+                                    <!-- Product Price Ends -->
+                                    <!-- Add To Cart Button Starts -->
+                                    <button type="button " class="btn module-product-btn-cart animation rounded-3 " onclick="cart.add(&#39;47&#39;); "><i class="fa fa-shopping-cart "></i> Add to Cart</button>
+                                    <!-- Add To Cart Button Ends -->
+                                </div>
+                                <!-- Product Caption Ends -->
+                            </div>
+                            <!-- Product Module Ends -->
+                        </div>
+                        <!-- Product Col Ends -->
+                        <!-- Product Col Starts -->
+                        <div class="product-layout col-lg-3 col-md-4 col-sm-6 col-xs-12 ">
+                            <!-- Product Module Starts -->
+                            <div class="product-thumb module-product animation rounded-3 ">
+                                <!-- Product Image Starts -->
+                                <div class="module-product-image ">
+                                    <a href="#">
+                                        <img src="./Your Store_files/img/carrot.jpg" alt="Carrot" title="Carrot" class="img-responsive img-center ">
+                                    </a>
+                                </div>
+                                <!-- Product Image Ends -->
+                                <!-- Product Caption Starts -->
+                                <div class="module-product-caption ">
+                                    <!-- Product Name Starts -->
+                                    <h6 class="module-product-title "><a href="# ">Carrot</a></h6>
+                                    <!-- Product Name Ends -->
+                                    <!-- Product Description Starts -->
+                                    <div class="module-product-description hidden ">
+                                        Unprecedented power. The next generation of processing technology has arrived. Built into the newest..
+                                    </div>
+                                    <!-- Product Description Ends -->
+                                    <!-- Product Price Starts -->
+                                    <div class="module-product-price ">
+                                        $1,202.00
+                                    </div>
+                                    <!-- Product Price Ends -->
+                                    <!-- Add To Cart Button Starts -->
+                                    <button type="button " class="btn module-product-btn-cart animation rounded-3 " onclick="cart.add(&#39;46&#39;); "><i class="fa fa-shopping-cart "></i> Add to Cart</button>
+                                    <!-- Add To Cart Button Ends -->
+                                </div>
+                                <!-- Product Caption Ends -->
+                            </div>
+                            <!-- Product Module Ends -->
+                        </div>
+                        <!-- Product Col Ends -->
+
+                    </div>
+                    <!-- Nested Row Ends -->
+                </div>
+                <div id="bannergrid1 " class="banner-grid-wrap text-center ">
+                    <div class="row ">
+                        <div class="col-md-4 col-sm-12 ">
+                            <div class="banner-grid ">
+                                <a href="# "><img src="./Your Store_files/img/carrot.jpg " alt="Banner 1 " class="img-responsive img-center rounded-3 "></a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 ">
+                            <div class="banner-grid ">
+                                <a href="# "><img src="./Your Store_files/img/carrot.jpg " alt="Banner 2 " class="img-responsive img-center rounded-3 "></a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 ">
+                            <div class="banner-grid ">
+                                <a href="# "><img src="./Your Store_files/img/carrot.jpg " alt="Banner 3 " class="img-responsive img-center rounded-3 "></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-product-wrap ">
+                    <!-- Module Heading Starts -->
+                    <h3 class="module-product-heading ">Featured</h3>
+                    <!-- Module Heading Ends -->
+                    <!-- Nested Row Starts -->
+                    <div class="row ">
+                        <!-- Product Col Starts -->
+                        <div class="product-layout col-lg-3 col-md-4 col-sm-6 col-xs-12 ">
+                            <!-- Product Module Starts -->
+                            <div class="product-thumb module-product animation rounded-3 ">
+                                <!-- Product Image Starts -->
+                                <div class="module-product-image ">
+                                    <a href="#">
+                                        <img src="./Your Store_files/img/carrot.jpg" alt="carrot " title="carrot " class="img-responsive img-center ">
+                                    </a>
+                                </div>
+                                <!-- Product Image Ends -->
+                                <!-- Product Caption Starts -->
+                                <div class="module-product-caption ">
+                                    <!-- Product Name Starts -->
+                                    <h6 class="module-product-title "><a href="#">Carrot</a></h6>
+                                    <!-- Product Name Ends -->
+                                    <!-- Product Description Starts -->
+                                    <div class="module-product-description hidden ">
+
+
+                                        Intel Core 2 Duo processor Powered by an Intel Core 2 Duo processor at speeds up to 2.1..
+                                    </div>
+                                    <!-- Product Description Ends -->
+                                    <!-- Product Price Starts -->
+                                    <div class="module-product-price ">
+                                        60.00
+                                    </div>
+                                    <!-- Product Price Ends -->
+                                    <!-- Add To Cart Button Starts -->
+                                    <button type="button " class="btn module-product-btn-cart animation rounded-3 " onclick="cart.add(&#39;43&#39;); "><i class="fa fa-shopping-cart "></i> Add to Cart</button>
+                                    <!-- Add To Cart Button Ends -->
+                                </div>
+                                <!-- Product Caption Ends -->
+                            </div>
+                            <!-- Product Module Ends -->
+                        </div>
+                        <!-- Product Col Ends -->
+                        <!-- Product Col Starts -->
+                        <div class="product-layout col-lg-3 col-md-4 col-sm-6 col-xs-12 ">
+                            <!-- Product Module Starts -->
+                            <div class="product-thumb module-product animation rounded-3 ">
+                                <!-- Product Image Starts -->
+                                <div class="module-product-image ">
+                                    <a h ref="#">
+                                        <img src="./Your Store_files/img/carrot.jpg " alt="carrot" title="carrot " class="img-responsive img-center ">
+                                    </a>
+                                </div>
+                                <!-- Product Image Ends -->
+                                <!-- Product Caption Starts -->
+                                <div class="module-product-caption ">
+                                    <!-- Product Name Starts -->
+                                    <h6 class="module-product-title "><a href="#">Carrot</a></h6>
+                                    <!-- Product Name Ends -->
+                                    <!-- Product Description Starts -->
+                                    <div class="module-product-description hidden ">
+
+                                    </div>
+                                    <!-- Product Description Ends -->
+                                    <!-- Product Price Starts -->
+                                    <div class="module-product-price ">
+                                        $123.20
+                                    </div>
+                                    <!-- Product Price Ends -->
+                                    <!-- Add To Cart Button Starts -->
+                                    <button type="button " class="btn module-product-btn-cart animation rounded-3 " onclick="cart.add(&#39;40&#39;); "><i class="fa fa-shopping-cart "></i> Add to Cart</button>
+                                    <!-- Add To Cart Button Ends -->
+                                </div>
+                                <!-- Product Caption Ends -->
+                            </div>
+                            <!-- Product Module Ends -->
+                        </div>
+                        <!-- Product Col Ends -->
+                        <!-- Product Col Starts -->
+                        <div class="product-layout col-lg-3 col-md-4 col-sm-6 col-xs-12 ">
+                            <!-- Product Module Starts -->
+                            <div class="product-thumb module-product animation rounded-3 ">
+                                <!-- Product Image Starts -->
+                                <div class="module-product-image ">
+                                    <a h ref="#">
+                                        <img src="./Your Store_files/img/carrot.jpg" alt="carrot" title="carrot" class="img-responsive img-center ">
+                                    </a>
+                                </div>
+                                <!-- Product Image Ends -->
+                                <!-- Product Caption Starts -->
+                                <div class="module-product-caption ">
+                                    <!-- Product Name Starts -->
+                                    <h6 class="module-product-title "><a href="#">Carrot</a>
+                                    </h6>
+                                    <!-- Product Name Ends -->
+                                    <!-- Product Description Starts -->
+                                    <div class="module-product-description hidden">
+
+                                                                            </div>
+                                    <!-- Product Description Ends -->
+                                    <!-- Product Price Starts -->
+                                    <div class="module-product-price">
+                                        <span class="price-new">$110.00</span> <span class="price-old">$122.00</span>
+                                    </div>
+                                    <!-- Product Price Ends -->
+                                    <!-- Add To Cart Button Starts -->
+                                    <button type="button" class="btn module-product-btn-cart animation rounded-3" onclick="cart.add(&#39;42&#39;);"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+                                    <!-- Add To Cart Button Ends -->
+                                </div>
+                                <!-- Product Caption Ends -->
+                            </div>
+                            <!-- Product Module Ends -->
+                        </div>
+                        <!-- Product Col Ends -->
+                        <!-- Product Col Starts -->
+                        <div class="product-layout col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <!-- Product Module Starts -->
+                            <div class="product-thumb module-product animation rounded-3">
+                                <!-- Product Image Starts -->
+                                <div class="module-product-image">
+                                    <a href="#">
+                                        <img src="./Your Store_files/img/carrot.jpg" alt="carrot" title="Carrot" class="img-responsive img-center">
+                                    </a>
+                                </div>
+                                <!-- Product Image Ends -->
+                                <!-- Product Caption Starts -->
+                                <div class="module-product-caption">
+                                    <!-- Product Name Starts -->
+                                    <h6 class="module-product-title"><a href="#">Carrot</a></h6>
+                                    <!-- Product Name Ends -->
+                                    <!-- Product Description Starts -->
+                                    <div class="module-product-description hidden">
+
+                                        Canon's press material for the EOS 5D states that it 'defines (a) new D-SLR category', while we'r..
+                                    </div>
+                                    <!-- Product Description Ends -->
+                                    <!-- Product Price Starts -->
+                                    <div class="module-product-price">
+                                        <span class="price-new">$8.00</span> <span class="price-old">$122.00</span>
+                                    </div>
+                                    <!-- Product Price Ends -->
+                                    <!-- Add To Cart Button Starts -->
+                                    <button type="button" class="btn module-product-btn-cart animation rounded-3" onclick="cart.add(&#39;30&#39;);"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+                                    <!-- Add To Cart Button Ends -->
+                                </div>
+                                <!-- Product Caption Ends -->
+                            </div>
+                            <!-- Product Module Ends -->
+                        </div>
+                        <!-- Product Col Ends -->
+
+                    </div>
+                    <!-- Nested Row Ends -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Starts -->
+    <footer class="main-footer animation">
+        <!-- Nested Container Starts -->
+        <div class="container">
+            <!-- Nested Row Starts -->
+            <div class="row">
+                <!-- Information Column Starts -->
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <!-- Foot Col Starts -->
+                    <div class="foot-col">
+                        <!-- Foot Col Head Starts -->
+                        <h4 class="foot-col-head text-color-brand font-weight-medium">Information</h4>
+                        <!-- Foot Col Head Ends -->
+                        <!-- Foot Col Body Starts -->
+                        <div class="foot-col-body">
+                            <!-- Footer Links Starts -->
+                            <ul class="list-unstyled footer-links mb-xs-0 mb-sm-0 font-weight-medium">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Delivery Information</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms &amp; Conditions</a></li>
+                            </ul>
+                            <!-- Footer Links Ends -->
+                        </div>
+                        <!-- Foot Col Body Ends -->
+                    </div>
+                    <!-- Foot Col Ends -->
+                </div>
+                <!-- Information Column Ends -->
+                <!-- My Account Column Starts -->
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <!-- Foot Col Starts -->
+                    <div class="foot-col">
+                        <!-- Foot Col Head Starts -->
+                        <h4 class="foot-col-head text-color-brand font-weight-medium">My Account</h4>
+                        <!-- Foot Col Head Ends -->
+                        <!-- Foot Col Body Starts -->
+                        <div class="foot-col-body">
+                            <!-- Footer Links Starts -->
+                            <ul class="list-unstyled footer-links mb-xs-0 mb-sm-0 font-weight-medium">
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">Order History</a></li>
+                                <li><a href="#">Wish List</a></li>
+                                <li><a href="#">Newsletter</a></li>
+                            </ul>
+                            <!-- Footer Links Ends -->
+                        </div>
+                        <!-- Foot Col Body Ends -->
+                    </div>
+                    <!-- Foot Col Ends -->
+                </div>
+                <!-- My Account Column Ends -->
+                <!-- Customer Services Column Starts -->
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <!-- Foot Col Starts -->
+                    <div class="foot-col">
+                        <!-- Foot Col Head Starts -->
+                        <h4 class="foot-col-head text-color-brand font-weight-medium">Customer Service</h4>
+                        <!-- Foot Col Head Ends -->
+                        <!-- Foot Col Body Starts -->
+                        <div class="foot-col-body">
+                            <!-- Footer Links Starts -->
+                            <ul class="list-unstyled footer-links mb-xs-0 mb-sm-0 font-weight-medium">
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Returns</a></li>
+                                <li><a href="#">Site Map</a></li>
+                            </ul>
+                            <!-- Footer Links Ends -->
+                        </div>
+                        <!-- Foot Col Body Ends -->
+                    </div>
+                    <!-- Foot Col Ends -->
+                </div>
+                <!-- Customer Services Column Ends -->
+                <!-- Divider For Small Screens Starts -->
+                <div class="col-xs-12 hidden-xs hidden-md hidden-lg">
+                    <hr class="hr-1">
+                </div>
+                <!-- Divider For Small Screens Ends -->
+                <!-- Contact Us Column Starts -->
+                <div class="col-md-3 col-xs-12">
+                    <!-- Foot Col Starts -->
+                    <div class="foot-col last">
+                        <!-- Foot Col Head Starts -->
+                        <h4 class="foot-col-head text-color-brand font-weight-medium">Contact Us</h4>
+                        <!-- Foot Col Head Ends -->
+                        <!-- Foot Col Body Starts -->
+                        <div class="foot-col-body">
+                            <!-- Footer Contact Links Starts -->
+                            <ul class="list-unstyled footer-contact-links mb-xs-0 mb-sm-0 font-weight-medium">
+                                <li><i class="fa fa-shopping-cart"></i> Gambo Shopping Cart</li>
+                                <li><i class="fa fa-map-marker"></i> My Company, Road No.</li>
+                                <li><i class="fa fa-envelope-o"></i> E-mail : <a href="#">info@yourdomain.com</a></li>
+                                <li><i class="fa fa-phone"></i> Phone: <a href="tel:180000000">001 234 567 8900</a></li>
+                            </ul>
+                            <!-- Footer Contact Links Ends -->
+                        </div>
+                        <!-- Foot Col Body Ends -->
+                    </div>
+                    <!-- Foot Col Ends -->
+                </div>
+                <!-- Contact Us Column Ends -->
+            </div>
+            <!-- Nested Row Ends -->
+        </div>
+        <!-- Nested Container Ends -->
+    </footer>
+    <!-- Footer Ends -->
+    <!-- Copyright Starts -->
+    <div class="copyright">
+        <!-- Nested Container Starts -->
+        <div class="container text-center-xs text-center-sm clearfix">
+            <!-- Copyright Text Starts -->
+            <div class="pull-left-lg pull-left-md">
+                <p class="copyright-text mb-lg-0 mb-md-0">Powered By <a href="#">saran</a>
+                </p>
+            </div>
+            <!-- Copyright Text Ends -->
+            <!-- Payment Gateway Starts -->
+            <div class="pull-right-lg pull-right-md">
+                <ul class="list-unstyled list-inline mb-0 text-right-lg text-right-md animation">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <!-- Payment Gateway Ends -->
+        </div>
+        <!-- Nested Container Ends -->
+    </div>
+    </div>
+
+</body>
+
+</html>
